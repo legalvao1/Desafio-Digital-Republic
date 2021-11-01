@@ -110,3 +110,32 @@ describe('Testa a função areaASerPintada', () => {
   });
 });
 
+describe('Testa a função verificaAlturaDaParede', () => {
+  const obj = {
+    alturaParede: 8, 
+    larguraParede: 1, 
+    janelas: 1, 
+    portas: 1
+  };
+
+  const expected_response = 4.08;
+
+  before(() => {
+    const obj = {};
+    obj.areaParede = verificaAlturaParede
+    sinon.stub(obj, 'areaParede').returns(expected_response);
+  });
+
+  it('testa se o retorno é um numero', () => {
+    
+    const response = verificaAlturaParede(obj);
+
+    expect(response).to.be.a('number');
+  });
+
+  it('é igual ao expected_response', () => {
+    const resposta = verificaAlturaParede(obj);
+
+    expect(resposta).to.be.equals(expected_response);
+  });
+});
