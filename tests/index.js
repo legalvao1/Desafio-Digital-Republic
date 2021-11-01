@@ -84,6 +84,29 @@ describe('Testa a função que recebe as medidas das quatro paredes', () => {
     expect(resposta).to.equals(responseExample)
   });
 
+});
 
+
+describe('Testa a função areaASerPintada', () => {
+  const erroEsperado = 'Parede não comporta portas e janelas';
+
+  before(() => {
+    const obj = {};
+    obj.area = areaASerPintada
+    sinon.stub(obj, 'area').returns(erroEsperado);
+  });
+
+  it('testa se o retorno é um erro', () => {
+    const response = areaASerPintada(3, 1.52, 2.4);
+    console.log(response);
+
+    expect(response).to.be.a('string');
+  });
+
+  it('é igual ao erro esperado', () => {
+    const resposta = areaASerPintada(3, 1.52, 2.4);
+
+    expect(resposta).to.be.equals(erroEsperado);
+  });
 });
 
