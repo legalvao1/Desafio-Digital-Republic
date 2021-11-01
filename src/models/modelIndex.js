@@ -10,7 +10,7 @@ const retornaQuantidadeDeLatas = () => {
     const latasMaiorZero = Object.entries(totalLatas).filter((lata) => totalLatas[lata[0]] > 0);
     const latasString = latasMaiorZero.map((lata) => ` ${lata[1]} Lata(s): ${lata[0]} Litros`)
     medidaDasQuatroParedes = [];
-    return `Você precisara de: ` + [...latasString]
+    return `Você precisará de: ` + [...latasString]
 };
 
 const calculaQuantidadeTinta = (area) => {
