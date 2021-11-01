@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./tests --recursive",
+    "test:coverage": "nyc --include='src/**/*.js' npm run test",
     "start": "node server.js",
     "debug": "nodemon server.js"
   },
@@ -19,6 +20,8 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.3",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "nyc": "^15.1.0",
+    "sinon": "^11.1.2"
   }
 }

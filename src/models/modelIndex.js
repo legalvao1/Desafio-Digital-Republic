@@ -45,7 +45,6 @@ const areaASerPintada = (areaDaParede, areaPortas, areaJanelas) => {
   const areaTinta = areaPortaJanela - (parseFloat(areaPortas) + parseFloat(areaJanelas));
   if (areaTinta < 0) return "Parede não comporta portas e janelas";
   return parseFloat((areaTinta + areaPortaJanela).toFixed(2));
-  
 };
 
 const calculaAreaDaParede = (alturaParede, larguraParede) => {
@@ -61,9 +60,7 @@ const calculaAreaPortasOuJanelas = (qtd, altura, largura) => {
 };
 
 const verificaAlturaParede = ({ alturaParede, larguraParede, janelas, portas }) => {
-  if (portas) {
-    if (alturaParede < alturaPorta + 0.30) return "Essa parede não comporta o tamanho da porta" 
-  };
+  if (alturaParede < alturaPorta + 0.30) return "Essa parede não comporta o tamanho da porta" 
   
   const areaPorta = calculaAreaPortasOuJanelas(portas, alturaPorta, larguraPorta);
   const areaJanela = calculaAreaPortasOuJanelas(janelas, alturaJanela, larguraJanela);
@@ -90,9 +87,7 @@ const paredes = (obj) => {
     
   } while (medidaDasQuatroParedes.length < 4);
 
-  if (medidaDasQuatroParedes.length === 4) {
-    return retornaQuantidadeDeLatas();
-  };
+  return retornaQuantidadeDeLatas();
 };
 
-module.exports = { paredes };
+module.exports = { paredes, verificaAlturaParede, areaASerPintada };
