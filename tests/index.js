@@ -57,6 +57,33 @@ describe('Testa a função que recebe as medidas das quatro paredes', () => {
     expect(resposta).to.equals(responseExample)
   });
 
-});
+  it('testa se um erro é retornado, se a altura da parede não comporta a porta', () => {
+    const dataExmple = {
+      altura1: '8',
+      largura1: '1',
+      porta1: '1',
+      janela1: '0',
+      altura2: '8',
+      largura2: '1',
+      porta2: '0',
+      janela2: '1',
+      altura3: '8',
+      largura3: '1',
+      porta3: '0',
+      janela3: '0',
+      altura4: '2',
+      largura4: '1',
+      porta4: '2',
+      janela4: '0'
+    };
 
+    const responseExample = 'Essa parede não comporta o tamanho da porta, \nTente novamente'
+
+    const resposta = paredes(dataExmple);
+
+    expect(resposta).to.equals(responseExample)
+  });
+
+
+});
 
