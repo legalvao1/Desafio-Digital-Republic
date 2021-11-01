@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Tinta</title>
+</head>
+  <body>
+    <section>
+      <form id="form" action="/" method="POST">
+        <div id="principal">
+          <div id="tituloParede1">
+            <label id="labelParede1">Parede 1</label>          
+          </div>
+          <div id="medidasParede1">
+            <label id="alturaParede1">Altura: <input name="altura1" type="number" min="0" value="0"></label>
+            <label id="larguraParede1">Largura: <input name="largura1" type="number" min="0" value="0"></label>
+            <label id="quantidadePortasParede1">Porta(s): <input name="porta1" type="number" min="0" value="0"></label>
+            <label id="quantidadeJanelasParede1">Janela(s): <input name="janela1" type="number" min="0" value="0"></label>
+          </div>
+          <div id="tituloParede2">
+            <label id="labelParede2">Parede 2</label>          
+          </div>
+          <div id="medidasParede2">
+            <label id="alturaParede2">Altura: <input name="altura2" type="number" min="0" value="0"></label>
+            <label id="larguraParede2">Largura: <input name="largura2" type="number" min="0" value="0"></label>
+            <label id="quantidadePortasParede2">Porta(s): <input name="porta2" type="number" min="0" value="0"></label>
+            <label id="quantidadeJanelasParede2">Janela(s): <input name="janela2" type="number" min="0" value="0"></label>
+          </div>
+          <div id="tituloParede3">
+            <label id="labelParede3">Parede 3</label>          
+          </div>
+          <div id="medidasParede3">
+            <label id="alturaParede3">Altura: <input name="altura3" type="number" min="0" value="0"></label>
+            <label id="larguraParede3">Largura: <input name="largura3" type="number" min="0" value="0"></label>
+            <label id="quantidadePortasParede3">Porta(s): <input name="porta3" type="number" min="0" value="0"></label>
+            <label id="quantidadeJanelasParede3">Janela(s): <input name="janela3" type="number" min="0" value="0"></label>
+          </div>
+          <div id="tituloParede4">
+            <label id="labelParede4">Parede 4</label>          
+          </div>
+          <div id="medidasParede4">
+            <label id="alturaParede4">Altura: <input name="altura4" type="number" min="0" value="0"></label>
+            <label id="larguraParede4">Largura: <input name="largura4" type="number" min="0" value="0"></label>
+            <label id="quantidadePortasParede4">Porta(s): <input name="porta4" type="number" min="0" value="0"></label>
+            <label id="quantidadeJanelasParede4">Janela(s): <input name="janela4" type="number" min="0" value="0"></label>
+          </div>
+        </div>
+        <div id="calcular">
+          <button id="btnCalcular" type="submit">Calcular</button>
+        </div>
+      </form>
+    </section>
+  <p>Resultado: <%= resultado %></p>
+  </body>
+</html>
