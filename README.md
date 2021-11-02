@@ -18,10 +18,10 @@ Com base na quantidade necessária o sistema deve apontar tamanhos de lata de ti
 -   Chai
 
 ## Preview  🎥
-<img src="/imagens/tela1.png" alt="tela-inicial"/>
-<img src="/imagens/tela2.png" alt="tela-inicial"/>
-<img src="/imagens/tela3.png" alt="tela-inicial"/>
-<img src="/imagens/tela4.png" alt="tela-inicial"/>
+<img src="/images/tela1.png" alt="tela-inicial"/>
+<img src="/images/tela2.png" alt="erro-area-parede"/>
+<img src="/images/tela3.png" alt="erro-porta-maior-parede"/>
+<img src="/images/tela4.png" alt="sucesso"/>
 
 Para iniciar o desenvolvimento, é necessário clonar o repositório do GitHub, acessar o projeto Digital Republic e intalar as dependências:
 ```shell
