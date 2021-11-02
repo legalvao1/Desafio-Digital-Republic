@@ -60,12 +60,13 @@ const calculaAreaPortasOuJanelas = (qtd, altura, largura) => {
 };
 
 const verificaAlturaParede = ({ alturaParede, larguraParede, janelas, portas }) => {
+  const parede = calculaAreaDaParede(alturaParede, larguraParede);
+  if (typeof parede === 'string') return parede;
+  
   if (alturaParede < alturaPorta + 0.30) return "Essa parede não comporta o tamanho da porta" 
   
   const areaPorta = calculaAreaPortasOuJanelas(portas, alturaPorta, larguraPorta);
   const areaJanela = calculaAreaPortasOuJanelas(janelas, alturaJanela, larguraJanela);
-  const parede = calculaAreaDaParede(alturaParede, larguraParede);
-  if (typeof parede === 'string') return parede;
   return areaASerPintada(parede, areaPorta, areaJanela);
 };
 
@@ -81,7 +82,7 @@ const paredes = (obj) => {
     const resultado = verificaAlturaParede(parede);
 
     if (typeof resultado === 'string') {
-      return `${resultado}, \nTente novamente`; 
+      return `${resultado}, \nTente novamente.`; 
     };
     medidaDasQuatroParedes.push(resultado);
     
