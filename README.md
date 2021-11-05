@@ -29,7 +29,7 @@ cd "diretorio de sua preferencia"
 
 git clone git@github.com:legalvao1/Desafio-Digital-Republic.git
 
-cd digital-republic
+cd Desafio-Digital-Republic
 
 npm install
 
